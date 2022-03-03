@@ -1,6 +1,8 @@
 import streamlit as st
 
-st.write(f'secret_a: {st.secrets["secret_a"]}')
-st.write(f'secret_b: {st.secrets["secret_b"]}')
-st.write(f'secret_block - subsecret_a: {st.secrets["secret_block"]["subsecret_a"]}')
-st.write(f'secret_block - subsecret_b: {st.secrets["secret_block"]["subsecret_b"]}')
+with st.echo(code_location = "below"):
+    st.write(st.secrets.username)
+    st.write(st.secrets.password)
+    st.write(st.secrets.fruit.applecolor)
+    st.write(st.secrets.fruit.appletaste)
+    st.write(st.secrets)
